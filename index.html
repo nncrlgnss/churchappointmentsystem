@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.0/css/font-awesome.min.css">
+    <title>Church Website</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+    <h2><a href="#"><img src="#" alt=""></a></h2>
+    <ul class="nav">
+        <li><a href="#Home">Home</a></li>
+        <li><a href="#About">About</a></li>
+        <li><a href="#Bible Verse">Bible Verse</a></li>
+        <li><a href="#Services">Services</a></li>
+          <!-- Display the username if the user is logged in -->
+          <li id="userDisplay"></li> <!-- New section for the username -->
+    </ul>
+</header>
+
+<section class="banner-area">
+    <video autoplay muted loop class="video-bg">
+        <source src="images\Vidbackground.mp4">
+        Your browser does not support the video tag.
+    </video>
+    <div class="banner-content">
+        <h1>APPOINTMENT<br><span>SYSTEM</span></h1>
+        <h3>BOOK YOUR APPOINTMENTS IN JUST A CLICK</h3>
+        <p>For booking and appointments please sign in!</p>
+        <button class="home-button" onclick="window.location.href='login.html'">Log In</button>
+        <button class="home-button" onclick="window.location.href='register.html'">Register</button> <!-- Added Register button -->
+    </div>
+</section>
+
+<section class="about-area" id="About">
+    <h1 class="section-title"><span> ABOUT</span></h1>
+    <ul class="about-content">
+        <li class="about-left">
+            <img src="images\about.jpg" alt="Description of the image">
+        </li>
+        <li class="about-right">
+         <h2>The Sagrada Família is an iconic basilica in Barcelona designed by Antoni Gaudí, celebrated for its stunning architecture that fuses <br>Gothic and Art Nouveau styles and remains under construction since 1882.</h2>
+            <p>
+                The Sagrada Família was conceived in 1882 by architect Francisco de Paula del Villar, who initially designed it in a traditional Gothic style. 
+                However, after a year, Antoni Gaudí took over the project and transformed it with his unique vision, incorporating intricate details, vibrant colors, and symbolic elements. 
+                Gaudí devoted the last 15 years of his life solely to the Sagrada Família, blending natural forms and religious themes into his design. The basilica has faced numerous challenges, 
+                including the Spanish Civil War, during which many of Gaudí’s original plans and models were destroyed. Despite these setbacks, construction has continued,
+                 driven by funding from private donations, with an anticipated completion date set for 2026, marking the centenary of Gaudí's death.
+            </p>
+            <p><i class="fa fa-arrow-right"></i>Unfinished Masterpiece: Construction of the Sagrada Família began in 1882 and is expected to be completed in 2026, more than 140 years after its inception.</p>
+            <p><i class="fa fa-arrow-right"></i>Unique Architecture: The basilica combines elements of Gothic and Art Nouveau architecture, featuring 18 towers representing the Twelve Apostles, the Virgin Mary, the four Evangelists, and Jesus Christ.</p>
+            <p><i class="fa fa-arrow-right"></i>Symbolic Design: Gaudí infused the basilica with Christian symbolism; for example, the Nativity façade represents the birth of Jesus, while the Passion façade depicts his crucifixion.</p>
+            <p><i class="fa fa-arrow-right"></i>UNESCO World Heritage Site: In 2005, the Sagrada Família was designated a UNESCO World Heritage Site for its artistic and cultural significance, recognizing its status as one of the most remarkable architectural achievements of the 20th century.</p>
+        </li>
+    </ul>      
+</section>
+
+    
+
+<section class="msg-area" id="Bible Verse">
+    <div class="msg-content">
+        <h2>Quote of the Day</h2>
+        <p>
+            1 Corinthians 16:13-14 - "Be watchful, stand firm in the faith, act like men, be strong. Let all that you do be done in love."
+        </p>
+    </div>
+</section>
+
+
+<section class="services-area" id="Services"> 
+    <div class="video-background">
+        <video autoplay muted loop>
+            <source src="images\Servicesbackground.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+    </div>
+    <div class="services-content">
+        <h2 class="section-title">Our Offers & Services</h2>
+        <ul class="services-content">
+            <li class="service service-wedding">
+                <h3>Wedding </h3>
+                <p>Celebrate the union of love and commitment with a beautifully tailored wedding ceremony, set in a sacred space that honors your vows and blesses your new journey together.</p>
+                <a href="booking.html" target="_blank"><button class="service-btn">Book Now</button></a>
+            </li>
+            <li class="service service-baptism">
+                <h3>Baptism</h3>
+                <p>A sacred initiation into faith, baptism is a special rite of passage symbolizing purification, renewal, and the beginning of one's spiritual journey in the Christian community.</p>
+                <a href="booking.html" target="_blank"><button class="service-btn">Book Now</button></a>
+            </li>
+            <li class="service service-funeral">
+                <h3>Funeral </h3>
+                <p>A time to remember and honor a loved one's life, the funeral service offers comfort, reflection, and spiritual support as we celebrate their journey into eternal peace.</p>
+                <a href="booking.html" target="_blank"><button class="service-btn">Book Now</button></a>
+            </li>
+            <li class="service service-blessing">
+                <h3>Blessing</h3>
+                <p>Whether for a new home, marriage, or personal milestone, our blessing services offer prayers of protection, peace, and divine favor over your life and endeavors.</p>
+                <a href="booking.html" target="_blank"><button class="service-btn">Book Now</button></a>
+            </li>
+            <li class="service service-bible-study">
+                <h3>Bible Study</h3>
+                <p>Deepen your understanding of God's Word through engaging Bible study sessions that encourage faith, fellowship, and practical application of the Scriptures in daily life.</p>
+                <a href="booking.html" target="_blank"><button class="service-btn">Book Now</button></a>
+            </li>
+            <li class="service service-counseling">
+                <h3>Counseling</h3>
+                <p>Receive spiritual guidance and emotional support through our confidential counseling services, aimed at helping individuals navigate life's challenges with faith and clarity.</p>
+                <a href="booking.html" target="_blank"><button class="service-btn">Book Now</button></a>
+            </li>
+        </ul>
+    </div>
+</section>
+
+
+
+
+<footer>
+    <div class="footer_main">
+        <div class="tag">
+            <h1>Contact</h1>
+            <a href="#"><i class="fa-solid fa-house"></i>Church Appointment System</a>
+            <a href="#"><i class="fa-solid fa-phone"></i>+639-7273</a>
+            <a href="#"><i class="fa-solid fa-envelope"></i>churchappointment@gmail.com</a>
+        </div>
+
+        <div class="tag">
+            <h1>Regional Location</h1>
+            <a href="#" class="center">Gorordo</a>
+            <a href="#" class="center">Avenue</a>
+            <a href="#" class="center">Cebu</a>
+            <a href="#" class="center">City</a>
+        </div>
+
+        <div class="tag">
+            <h1>Follow Us!</h1>
+            <div class="social_link">
+                <a href="https://www.facebook.com/"><i class="fa-brands fa-facebook-f"></i></a>
+                <a href="https://twitter.com/"><i class="fa-brands fa-twitter"></i></a>
+                <a href="https://www.instagram.com/"><i class="fa-brands fa-instagram"></i></a>
+                <a href="https://www.linkedin.com/"><i class="fa-brands fa-linkedin-in"></i></a>                    
+            </div>
+        </div>
+
+        </div>
+
+    </div>
+</footer>
+
+<!-- Hidden Forms -->
+<div id="overlay"></div> <!-- Overlay for background -->
+
+<!-- Login Form -->
+<div id="loginForm">
+    <h2>Login</h2>
+    <form id="loginFormContent">
+        <input type="text" id="loginUsername" placeholder="Username" required>
+        <input type="password" id="loginPassword" placeholder="Password" required>
+        <button type="submit">Log In</button>
+        <p class="error-message" id="loginError">Invalid input! Please avoid special characters.</p>
+        <a class="toggle-link" id="toRegister">Don't have an account? Register here</a>
+    </form>
+</div>
+
+<!-- Register Form -->
+<div id="registerForm">
+    <h2>Register</h2>
+    <form id="registerFormContent">
+        <input type="text" id="registerUsername" placeholder="Username" required>
+        <input type="email" id="registerEmail" placeholder="Email" required>
+        <input type="password" id="registerPassword" placeholder="Password" required>
+        <button type="submit">Register</button>
+        <p class="error-message" id="registerError">Invalid input! Please avoid special characters.</p>
+        <a class="toggle-link" id="toLogin">Already have an account? Log in here</a>
+    </form>
+</div>
+
+<footer>
+
+</footer>
+
+<script src="scriptt.js"></script>
+<script src="script.js"></script>
+</body>
+</html>

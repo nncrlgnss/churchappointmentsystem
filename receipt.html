@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Receipt</title>
+    <link rel="stylesheet" href="stylesss.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <h1>Church Appointment System</h1>
+        <nav class="nav">
+            <a href="index.html">Home</a>
+            <a href="about.html">About</a>
+            <a href="services.html">Services</a>
+            <a href="contact.html">Contact</a>
+        </nav>
+    </header>
+
+    <!-- Receipt Content -->
+    <main class="receipt-container">
+        <h2>Payment Receipt</h2>
+        <div class="receipt-details">
+            <p><strong>Payment Date:</strong> <span id="paymentDate"></span></p>
+            <p><strong>Amount Paid:</strong> <span id="amountPaid"></span> USD</p>
+            <p><strong>E-Wallet Provider:</strong> <span id="walletProvider"></span></p>
+            <p><strong>Transaction ID:</strong> <span id="transactionId"></span></p>
+        </div>
+        <button onclick="window.print()">Print Receipt</button>
+        <a href="index.html"><button>Back to Home</button></a>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <p>&copy; 2024 Church Appointment System. All rights reserved.</p>
+        <nav class="footer-nav">
+            <a href="#">Privacy Policy</a>
+            <a href="#">Terms of Service</a>
+        </nav>
+    </footer>
+
+    <script>
+        // Simulate receipt data (Replace with real data in a dynamic environment)
+        const receiptData = {
+            paymentDate: new Date().toLocaleString(),
+            amountPaid: localStorage.getItem('paymentAmount') || '0.00',
+            walletProvider: localStorage.getItem('walletProvider') || 'N/A',
+            transactionId: 'TXN' + Math.floor(Math.random() * 1000000) // Generate a mock transaction ID
+        };
+
+        // Populate the receipt page with data
+        document.getElementById('paymentDate').innerText = receiptData.paymentDate;
+        document.getElementById('amountPaid').innerText = receiptData.amountPaid;
+        document.getElementById('walletProvider').innerText = receiptData.walletProvider;
+        document.getElementById('transactionId').innerText = receiptData.transactionId;
+    </script>
+    <script src="scripts.js"></script>
+</body>
+</html>

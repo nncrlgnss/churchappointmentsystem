@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Payment Page</title>
+    <link rel="stylesheet" href="stylesss.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <h1>Church Appointment System</h1>
+        <nav class="nav">
+            <a href="index.html">Home</a>
+            <a href="about.html">About</a>
+            <a href="services.html">Services</a>
+            <a href="contact.html">Contact</a>
+        </nav>
+    </header>
+
+    <!-- Payment Form -->
+    <main class="payment-container">
+        <h2>Make a Payment</h2>
+        <form id="paymentForm">
+            <label for="paymentAmount">Enter Amount:</label>
+            <input type="number" id="paymentAmount" name="paymentAmount" placeholder="Enter amount in USD" required>
+
+            <label for="ewalletProvider">Select E-Wallet Provider:</label>
+            <select id="ewalletProvider" name="ewalletProvider" required>
+                <option value="">--Select Provider--</option>
+                <option value="gcash">GCash</option>
+            </select>
+
+            <a href="receipt.html">
+                <button>One last look</button>
+            </a>
+        </form>
+
+        <!-- Confirmation Section -->
+        <div id="paymentConfirmation" class="hidden">
+            <h3>Confirm Your Payment</h3>
+            <p id="confirmationDetails"></p>
+            <button type="button" id="finalizePaymentBtn">Finalize Payment</button>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <p>&copy; 2024 Church Appointment System. All rights reserved.</p>
+        <nav class="footer-nav">
+            <a href="#">Privacy Policy</a>
+            <a href="#">Terms of Service</a>
+        </nav>
+    </footer>
+
+    <script src="scripttt.js"></script>
+</body>
+</html>

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Church Appointment System - Welcome</title>
+    <link rel="stylesheet" href="styless.css">
+    <script>
+        window.onload = function () {
+            const username = localStorage.getItem("loggedInUser");
+            if (!username) {
+                alert("Please log in first.");
+                window.location.href = "login.html"; // Redirect to login if no user is logged in
+            } else {
+                document.getElementById("user-welcome").textContent = `Welcome, ${username}!`;
+            }
+        };
+
+        function logout() {
+            localStorage.removeItem("loggedInUser"); // Clear username from local storage
+            window.location.href = "login.html"; // Redirect to login page
+        }
+
+        function goHome() {
+            window.location.href = "index.html"; // Redirect to homepage
+        }
+    </script>
+</head>
+<body>
+    <div class="container">
+        <h1>Church Appointment System</h1>
+        <p id="user-welcome">Welcome!</p>
+        <button onclick="logout()">Logout</button>
+        <button onclick="goHome()">Home</button>
+    </div>
+</body>
+</html>

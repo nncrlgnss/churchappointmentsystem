@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Church Appointment - Confirmation</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Appointment Confirmation</h1>
+        <p>Please review your booking details:</p>
+
+        <div class="details">
+            <p><strong>Full Name:</strong> <span id="confirmName"></span></p>
+            <p><strong>Age:</strong> <span id="confirmAge"></span></p>
+            <p><strong>Date:</strong> <span id="confirmDate"></span></p>
+            <p><strong>Time:</strong> <span id="confirmTime"></span></p>
+            <p><strong>Contact Number:</strong> <span id="confirmContact"></span></p>
+            <p><strong>Email Address:</strong> <span id="confirmEmail"></span></p>
+        </div>
+
+        <div class="actions">
+            <button onclick="editDetails()">Edit Booking</button>
+            <button onclick="confirmBooking()">Confirm Appointment</button>
+            <a href="paymenttt.html">
+                <button>Add Payment</button>
+            </a>
+    </div>
+
+    <script>
+        // Extract query parameters
+        function getQueryParams() {
+            const params = new URLSearchParams(window.location.search);
+            return {
+                name: params.get("name"),
+                age: params.get("age"),
+                date: params.get("date"),
+                time: params.get("time"),
+                contact: params.get("contact"),
+                email: params.get("email"),
+            };
+        }
+
+        // Populate confirmation details
+        document.addEventListener("DOMContentLoaded", function () {
+            const details = getQueryParams();
+            document.getElementById("confirmName").textContent = details.name || "Not provided";
+            document.getElementById("confirmAge").textContent = details.age || "Not provided";
+            document.getElementById("confirmDate").textContent = details.date || "Not provided";
+            document.getElementById("confirmTime").textContent = details.time || "Not provided";
+            document.getElementById("confirmContact").textContent = details.contact || "Not provided";
+            document.getElementById("confirmEmail").textContent = details.email || "Not provided";
+        });
+
+        // Redirect to edit the form
+        function editDetails() {
+            window.history.back();
+        }
+
+        // Confirm the appointment
+        function confirmBooking() {
+            alert("Your appointment has been confirmed!");
+            // Add backend logic if needed
+        }
+    </script>
+</body>
+</html>
